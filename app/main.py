@@ -23,6 +23,10 @@ with open('app/config.json') as config_file:
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
+
 # Mount static files directory at "/static" path
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
