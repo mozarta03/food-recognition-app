@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Foodentity</title>
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/screen-adjusment.css" />
     </head>
     <body>
         <header class="header">
@@ -15,14 +16,15 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#scan">Get Started</a></li>
-                        <li><a href="#cnt">Contact</a></li>
+                        <li><a href="#homepage">Home</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#analyzer">Get Started</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </header>
-        <section class="homepage" id="hp">
+        <section class="homepage" id="homepage">
             <div class="card">
                 <div class="hp-content">
                     <h1>Welcome to Foodentity!</h1>
@@ -68,6 +70,41 @@
             </div>
             <script src="js/intro-nav.js"></script>
         </section>
+        <section class="about-us" id="about-us">
+            <div class="au-container">
+                <div class="card1" id="card">
+                    <h1>Who Are We?</h1>
+                    <p>Foodentity is developed by a small group of aspiring software developers, 
+                        which consists of five computer science students from Laguna State Polytechnic University - San Pablo Campus.</p>
+                </div>
+                <div class="card2" id="card">
+                    <h1>What is Our Website About</h1>
+                    <p>Foodentity is an AI-powered appthat can analyze your meals instantly. 
+                        Simply upload the image of your food, and we'll deliver precise nutritional 
+                        insights to help you make smarter dietary choices effortlessly.</p>
+                </div>
+                <div class="card3" id="card">
+                    <h1>Why this Matters?</h1>
+                    <p>Many gym-goers struggle to achieve their fitness goals. Tracking nutrition often 
+                        feels overwhelming—manually logging every meal and figuring out what your body needs 
+                        can be confusing. This leads to inconsistent results, unbalanced diets, and wasted effort.</p>
+                </div>
+                <div class="card4" id="card">
+                    <h1>Our Journey</h1>
+                    <p>As a team of five trainees during our IBM immersion program, we developed FoodEntity, 
+                        an AI-powered web app that identifies food from photos and provides nutritional information. 
+                        Through challenges and collaboration, we grew as developers and learned the power of teamwork, 
+                        turning our vision into reality.</p>
+                </div>
+                <div class="card5" id="card">
+                    <h1>What Makes Us Unique?</h1>
+                    <p>Foodentity leverages cutting-edge artificial intelligence to provide precise nutritional 
+                        insights for every meal. Unlike traditional apps that rely on the manual input of food items, 
+                        Foodentity uses advanced image classification to instantly identify your food and deliver tailored 
+                        nutritional information with ease.</p>
+                </div>
+            </div>
+        </section>
         <section class="tuto" id="guide">
             <div class="tuto-header">
                 <h1>How to Use</h1>
@@ -97,7 +134,7 @@
                 </div>
             </div>
         </section>
-        <section class="analyzer">
+        <section class="analyzer" id="analyzer">
             <div class="a-container">
                 <h1>Food Calorie Analyzer</h1>
                 <p>Upload Food Image</p>
@@ -114,7 +151,11 @@
                 <div class="image-container" id="image-container">
                     <img class="uploaded-image" id="uploaded-image" src=" ">                
                 </div>
-                        
+                
+                <div class="loading-container" id="loading-container" style="display: none;">
+                    <p class="loading-text">Loading...</p>
+                </div>
+                
                 <div class="result-container" id="result-container">
                     <h2>Nutrition Facts</h2>
                     <h3 id="food-item">Food Item:</h3>                
@@ -126,7 +167,7 @@
             </div>
         </section>
             
-        <section class="contact" id="cnt">
+        <section class="contact" id="contact">
             <!--<div class="img"></div>
             <div class="content">
                 <h2>Get in Touch</h2>
@@ -144,7 +185,7 @@
                         you have the best experience.</p>
                 </div>
                 <div class="contact-form-container">
-                    <form action="#" method="post" class="contact-form">
+                    <form action="#" method="post" class="contact-form" id="contact-form">
                         <div class="info">
                             <div>
                                 <label for="name">Name</label>
@@ -163,14 +204,19 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         </div>
-                        <button class="contact-btn">Sumbit</button>
+                        <button class="contact-btn" type="submit">Sumbit</button>
                     </form>
                 </div>
             </div>
         </section>
-        <footer>
-            <p>&copy; 2024 Group 1 LSPU-SPCC</p> 
-        </footer>
+        <section class="footer">
+            <footer>
+                <p>&copy; 2024 Group 1 LSPU-SPCC</p>  
+                <a href="https://www.fatsecret.com">
+                    <img src="https://platform.fatsecret.com/api/static/images/powered_by_fatsecret.png" srcset="https://platform.fatsecret.com/api/static/images/powered_by_fatsecret_2x.png 2x, https://platform.fatsecret.com/api/static/images/powered_by_fatsecret_3x.png 3x" border="0"/>
+                </a>
+            </footer>
+        </section>
         <script src="js/script.js"></script>
     </body>
 </html>

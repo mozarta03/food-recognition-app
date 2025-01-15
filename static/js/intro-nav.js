@@ -14,3 +14,4 @@ setInterval(function(){
     }
     document.getElementById('radio' + counter).checked = true;
 }, interval);
+

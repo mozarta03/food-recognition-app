@@ -152,7 +152,10 @@ analyzeButton.addEventListener('click', function () {
     const file = fileInput.files[0];
     if (file) {
         console.log("Analyzing file:", file.name);
-        nutritionResults.style.display = 'block';
+
+        // Show the loading indicator
+        document.getElementById("loading-container").style.display = 'block';
+        nutritionResults.style.display = 'none'; // Hide results initially
 
         // Create a FormData object to send the image
         var formData = new FormData();
@@ -171,6 +174,8 @@ analyzeButton.addEventListener('click', function () {
                 console.log("Response Data:", data); // Debugging line
 
                 if (data.prediction) {
+                    // Hide the loading indicator
+                    document.getElementById("loading-container").style.display = 'none';
                     var formattedPrediction = formatLabel(data.prediction);
 
                     document.getElementById("food-item").innerText = `Food Item: ${formattedPrediction}`;
@@ -180,13 +185,47 @@ analyzeButton.addEventListener('click', function () {
                     displayNutrition(data.nutrition_info);
                 } else {
                     alert("Error: Unable to get prediction");
+                    // Hide the loading indicator
+            document.getElementById("loading-container").style.display = 'none';
                 }
             })
             .catch((error) => {
                 console.error("Error:", error);
                 alert("Error: Unable to process the image");
+                // Hide the loading indicator
+            document.getElementById("loading-container").style.display = 'none';
             });
     } else {
         alert("Please upload an image first!");
     }
+});
+
+//script for form submission (contact us form)
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    // Gather form data
+    const formData = new FormData(form);
+
+    // Replace YOUR_GOOGLE_SCRIPT_URL with your actual deployment URL
+    fetch("https://script.google.com/macros/s/AKfycbzEF9FWl8Di3gIS2jE-r0GOVnK7hY9Kmc7p9qVGBor-aSZTY71TfgCNVvgIoXCk102j/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Failed to send the message. Please try again.");
+        }
+    })
+    .then(data => {
+        alert("Your message has been sent!");
+        form.reset(); // Clears the form after successful submission
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while sending your message. Please try again.");
+    });
 });

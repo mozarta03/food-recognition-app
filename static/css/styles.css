@@ -6,13 +6,17 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: white;
 }
 
+/*header*/
 header{
     width: 100%;
-    height: 75px;
     background: #4ca271;
     position: fixed;
     z-index: 1;
@@ -33,9 +37,9 @@ header{
 }
 
 .nav-bar .menu{
-    width: 417px;
+    width: 600px;
     float: right;
-    padding-right: 21vh;
+    padding-right: 7vh;
 }
 
 ul{
@@ -81,11 +85,13 @@ ul li a:hover::before{
     width: 100%;
 }
 
+/*homepage*/ 
 .homepage{
     width: auto;
     height: 96vh;
     position: static;
-    background-color: #dde7df;
+    background: rgb(240,250,245);
+    background: linear-gradient(180deg, rgba(240,250,245,1) 55%, rgba(204,219,201,1) 100%);
 }
 
 .card{
@@ -93,10 +99,12 @@ ul li a:hover::before{
     height: 60vh;
     border-radius: 10px;
     background: #fff0f5;
-    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 3px 30px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 30px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 30px -8px rgba(0,0,0,0.75);
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 55%;
     left: 50%;
     padding: 12px 10px;
     margin-top: 24px;
@@ -279,14 +287,80 @@ ul li a:hover::before{
     background: #777;
 }
 
-.tuto{
+/*about us*/
+.about-us{
+    height: 50vh;
+    background-color: #f5f5f5;
+    position: static;
+    padding: 45px;
+    border-width: 1px 0 0.1px;
+    border-style: solid;
+    border-color: #c3c6ce;
+    background-image: url(../image/about-us.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-margin-top: 25vh;
+}
+
+.au-container{
+    height: 50vh;
+    gap: 15px;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.au-container #card{
+    height: 40vh;
+    width: 30vh;
+    padding: 15px;
+    border-radius: 13px;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(0 0 0 / 60%);
+    transition: 400ms;
+}
+
+.au-container h1{
+    color: white;
+    text-shadow: 5px solid #17211b;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.au-container p{
+    color: white;
+    font-size: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.au-container #card:hover{
+    transform: scale(1.1, 1.1);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.au-container:hover > #card:not(:hover) {
+    filter: blur(2px);
+    transform: scale(0.9, 0.9);
+  }
+
+  /*how to use*/
+  .tuto{
     width: auto;
     height: 70vh;
     background-color: #f5f5f5;
-    border-width: 1px 0 2px 0;
+    border-width: 0.5px 0 2px 0;
     border-style: solid;
     border-color: #c3c6ce;
     position: static;
+    scroll-margin-top: 20vh;
 }
 
 .tuto-header{
@@ -296,7 +370,7 @@ ul li a:hover::before{
 
 .tuto-header h1{
     text-align: center;
-    color: #2e5a41;
+    color: #1d2f39;
     padding: 5px;
     margin-top: 30px;
     font-size: 30px;
@@ -548,6 +622,7 @@ ul li a:hover::before{
 
 .c-header p{
     font-size: 13px;
+    color:#14271c;
 }
 
 .contact-form-container{
@@ -600,13 +675,17 @@ ul li a:hover::before{
     outline: none;
 }
 
+.contact-form input:not(focus), .contact-form textarea:not(focus){
+    padding-left: 10px;
+    outline: none;
+}
+
 .contact-form input:focus-within, .contact-form textarea:focus-within{
     border: 1.5px solid #2e5a41;
 }
 
 .contact-form input::placeholder, .contact-form textarea::placeholder{
     opacity: 0.7;
-    padding-left: 10px;
 }
 
 .contact-btn{
@@ -642,10 +721,144 @@ ul li a:hover::before{
     transform: scale(0.98);
 }
 
-footer{
+/* ...existing code... */
+
+/* ...existing code... */
+
+.footer{
+
+    background-color: #f0f0f0;
+
+}
+
+.footer footer{
+    width: 100%;
+    margin-left: 80vh;
     text-align: center;
-    padding: 3px;
+    padding-top: 6px;
     background-color: #f0f0f0;
     font-size: 12px;
     position: static;
+    display: flex;
+}
+
+
+footer a{
+    padding: 0 0 0 50px;
+}
+
+
+/* ...existing code... */
+/* ...existing code... */
+
+
+/* Simple pulse animation for the loading text */
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+.loading-container {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Adjusted to be more compact */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it perfectly */
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.loading-text {
+    animation: pulse 1.5s ease-in-out infinite;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+/* For tablets (landscape) and small desktop */
+@media screen and (max-width: 1024px) {
+    .nav-bar .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+        color: white;
+        display: flex;
+        padding: 0 30px;
+    }
+    
+    .nav-bar .menu{
+        width: 417px;
+        float: right;
+        padding-right: 10vh;
+    }
+}
+
+/* Tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon img {
+        width: 30px;
+    }
+
+    .homepage h1 {
+        font-size: 1.8rem;
+    }
+
+    .homepage p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form-container {
+        padding: 10px;
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+    .icon {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .homepage h1 {
+        font-size: 1.5rem;
+    }
+
+    .homepage p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 12px;
+    }
 }

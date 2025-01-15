@@ -1,0 +1,17 @@
+/* For tablets (landscape) and small desktop */
+@media screen and (max-width: 1024px) {
+    .nav-bar .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+        color: white;
+        display: flex;
+        padding: 0 30px;
+    }
+    
+    .nav-bar .menu{
+        width: 417px;
+        float: right;
+        padding-right: 10vh;
+    }
+}
