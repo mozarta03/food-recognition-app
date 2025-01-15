@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodentity</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="nav-bar">
+                <div class="icon">
+                    <img class="img" src="image/f_logo1.png" alt="">
+                    <h2 class="web-name">Foodentity</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#scan">Get Started</a></li>
+                        <li><a href="#cnt">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="homepage" id="hp">
+            <div class="card">
+                <div class="hp-content">
+                    <h1>Welcome to Foodentity!</h1>
+                    <p class="intro-dsc">Take charge of your health with our smart nutritional insights. 
+                        Whether you want to lose weight, gain muscle, or just eat better,<br> our platform gives 
+                        you the knowledge to make healthier choices. Understand your meals and stay in control 
+                        of your diet with ease!</p>
+                    <a class="start" href="#">Get Started</a>
+                    <a class="learn-more" href="#">Learn More</a>
+                </div>
+                <div class="img-slds">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <div class="slide first">
+                            <img src="image/image1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/image2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/image3.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/image4.png" alt="">
+                        </div>
+                        <div class="nav-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="nav-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+            <script src="js/intro-nav.js"></script>
+        </section>
+        <section class="tuto" id="guide">
+            <div class="tuto-header">
+                <h1>How to Use</h1>
+                <p> With the help of this tool, you can <br>easily get food recognition and nutritional info 
+                    from<br> a photo of your meal, making healthier choices simpler.
+                </p>
+                <hr>
+            </div>
+            <div class="steps">
+                <div class="step1">
+                    <img src="image/icon1.png">
+                    <h2>Upload a Photo</h2>
+                    <p>Snap a picture of your meal and upload it effortlessly. Whether it’s<br>homemade or from a 
+                    restaurant,<br>simply share the image to get<br>started.</p>
+                </div>
+                <div class="step2">
+                    <img src="image/icon2.png">
+                    <h2>Food Recognition Results</h2>
+                    <p>Instantly receive detailed food<br>recognition results powered by<br>advanced AI. Identify what’s 
+                    on<br>your plate with precision and<br>clarity.</p>
+                </div>
+                <div class="step3">
+                    <img src="image/icon3.png">
+                    <h2>Nutritional Insights</h2>
+                    <p>Dive into comprehensive nutritional<br>data tailored to your meal. Make<br>informed dietary choices 
+                        with ease,<br>ensuring every bite aligns with<br>your health goals.</p>
+                </div>
+            </div>
+        </section>
+        <section class="analyzer">
+            <div class="a-container">
+                <h1>Food Calorie Analyzer</h1>
+                <p>Upload Food Image</p>
+                <div class="u-container" id="drop-area">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="u-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 
+                        0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                    </svg>
+                    <p class="upload-txt"><b>Click to upload</b> or drag and drop</p>
+                    <p class="file-txt">PNG, JPG up to 10MB</p>
+                </div>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="a-btn" id="analyze-btn">Analyze Food</button>
+                <div class="image-container" id="image-container">
+                    <img class="uploaded-image" id="uploaded-image" src=" ">                
+                </div>
+                        
+                <div class="result-container" id="result-container">
+                    <h2>Nutrition Facts</h2>
+                    <h3 id="food-item">Food Item:</h3>                
+                    <!-- Result section to display prediction -->
+                    <div id="prediction-box" class="prediction-box">
+                        <ul id="nutrition-list" class="nutrition-list"></ul>    
+                    </div>    
+                </div>
+            </div>
+        </section>
+            
+        <section class="contact" id="cnt">
+            <!--<div class="img"></div>
+            <div class="content">
+                <h2>Get in Touch</h2>
+                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br> exercitation ullamco laboris</p>
+                <button class="cnt_btn">Contact Us</button>
+            </div>-->
+            <div class="c-img">
+                <img src="image/contact.png" alt="">
+            </div>
+            <div class="c-container">
+                <div class="c-header">
+                    <h2>Have a question? Feel free to contact us!</h2>
+                    <p>We’re here to assist you with any inquiries, feedback, or support you may need. Simply 
+                        fill out the form below, and our team will get back to you as soon as possible to ensure 
+                        you have the best experience.</p>
+                </div>
+                <div class="contact-form-container">
+                    <form action="#" method="post" class="contact-form">
+                        <div class="info">
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="message">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button class="contact-btn">Sumbit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Group 1 LSPU-SPCC</p> 
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
